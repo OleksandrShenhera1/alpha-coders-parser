@@ -34,4 +34,13 @@ pip install webdriver-manager
 
 ---
 
+## 📋 Changes
+
+## v1.1.0 — 2025-06-21
+- Page count selector is now available
+- Auto creation of folder for images
+- Error catcher
+
+---
+
 **If you need help or want to suggest a feature, feel free to open an issue!**
