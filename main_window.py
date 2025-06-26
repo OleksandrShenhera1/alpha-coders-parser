@@ -14,3 +14,4 @@ class MainWindow(QMainWindow):
         main_widget = create_main_widget(self)
         self.setCentralWidget(main_widget)
         self.setStyleSheet(STYLESHEET)
+

@@ -21,6 +21,7 @@ STYLESHEET = """
         border: 1px solid #4C566A;
         border-radius: 5px;
         padding: 5px;
+        margin-left: 10px;
     }
     QPushButton {
         background-color: #5E81AC;
@@ -29,8 +30,21 @@ STYLESHEET = """
         padding: 10px 15px;
         border-radius: 8px;
         font-weight: bold;
+        margin-left: 10px;
     }
     QPushButton:hover {
         background-color: #81A1C1;
+    }
+    QCheckBox {
+    color: #33aaff;
+    font-weight: bold;
+    }
+    QCheckBox::indicator {
+        width: 20px;
+        height: 20px;
+    }
+    QCheckBox::indicator:checked {
+        background-color: #33aaff;
+        border: 1px solid #0077cc;
     }
 """
