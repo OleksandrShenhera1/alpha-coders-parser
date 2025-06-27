@@ -4,7 +4,7 @@ import os
 import requests
 from pathlib import Path
 
-def download_img():
+def download_img(best: bool, latest: bool, popular: bool):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()

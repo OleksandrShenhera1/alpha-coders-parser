@@ -1,8 +1,11 @@
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QListWidget, QPushButton, QGroupBox,
-    QComboBox, QLabel, QLineEdit, QProgressBar, QTextEdit, QCheckBox
+    QComboBox, QLabel, QLineEdit, QProgressBar, QTextEdit, QCheckBox, QTextBrowser
 )
-from PyQt6.QtCore import pyqtSignal, Qt, QSize
+from PyQt6.QtCore import pyqtSignal, Qt, QSize, QUrl
+from PyQt6.QtGui import QDesktopServices
+
+from config import SETHTML
 
 def create_main_widget(parent_window):
 
@@ -38,6 +41,7 @@ def create_main_widget(parent_window):
     save_folder_layout = QVBoxLayout()
     parent_window.save_folder_line = QLineEdit()
     parent_window.save_folder_btn = QPushButton("Browse")
+    parent_window.save_folder_btn.clicked.connect(parent_window.browse_file)
     save_folder_layout.addWidget(parent_window.save_folder_line)
     save_folder_layout.addWidget(parent_window.save_folder_btn)
     fields_layout.addLayout(save_folder_layout)
@@ -50,17 +54,25 @@ def create_main_widget(parent_window):
     manual_group = QGroupBox("Manual")
     manual_layout = QHBoxLayout(manual_group)
     # How to use 
-    parent_window.info = QTextEdit()
+    parent_window.info = QTextBrowser()
     parent_window.info.setReadOnly(True)
+    parent_window.info.setHtml(SETHTML)
+    parent_window.info.setOpenExternalLinks(True)
     manual_layout.addWidget(parent_window.info)
     main_layout.addWidget(manual_group)
-
     # Console section
     console_group = QGroupBox("Console")
-    console_layout = QHBoxLayout(console_group)
+    console_layout = QVBoxLayout(console_group)
     # Console
+    parent_window.progress_bar = QProgressBar()
+    parent_window.progress_bar.setValue(0)
+    parent_window.start_btn = QPushButton("Start")
+    parent_window.start_btn.setObjectName("startbtn")
+    parent_window.start_btn.clicked.connect(parent_window.startbtn_parser)
     parent_window.console = QTextEdit()
     parent_window.console.setReadOnly(True)
+    console_layout.addWidget(parent_window.progress_bar)
+    console_layout.addWidget(parent_window.start_btn)
     console_layout.addWidget(parent_window.console)
     main_layout.addWidget(console_group)
 

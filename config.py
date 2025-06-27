@@ -32,6 +32,18 @@ STYLESHEET = """
         font-weight: bold;
         margin-left: 10px;
     }
+    #startbtn {
+        background-color: #5E81AC;
+        color: #ECEFF4;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+    #startbtn:hover {
+        background-color: #81A1C1;
+    }
     QPushButton:hover {
         background-color: #81A1C1;
     }
@@ -47,4 +59,28 @@ STYLESHEET = """
         background-color: #33aaff;
         border: 1px solid #0077cc;
     }
+    QProgressBar {
+        border: 1px solid #4C566A;
+        border-radius: 8px;
+        text-align: center;
+        background-color: #3B4252;
+        color: #D8DEE9;
+    }
+    QProgressBar::chunk {
+        background-color: #A3BE8C;
+        border-radius: 7px;
+    }
+"""
+
+SETHTML = """ 
+    <h2>Instructions on How to Use the Application</h2>
+    <br>
+    <ol style="font-size:14pt;" align="left">
+        <li>Select the required checkboxes</li>
+        <li>Set the page count (1 is the minimum value)</li>
+        <li>Enter your output directory or browse for it</li>
+        <li>Press the large Start button!</li>
+    </ol>
+    <br>
+    <p style="font-size:14pt;">Find more information on the <a href='https://github.com/OleksandrShenhera1/alpha-coders-parser' style="color:#ffffff">GitHub profile</a>.</p>
 """
