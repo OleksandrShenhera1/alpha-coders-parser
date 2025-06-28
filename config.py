@@ -32,6 +32,9 @@ STYLESHEET = """
         font-weight: bold;
         margin-left: 10px;
     }
+    QPushButton:hover {
+        background-color: #81A1C1;
+    }
     #startbtn {
         background-color: #5E81AC;
         color: #ECEFF4;
@@ -44,8 +47,17 @@ STYLESHEET = """
     #startbtn:hover {
         background-color: #81A1C1;
     }
-    QPushButton:hover {
-        background-color: #81A1C1;
+    #stopbtn {
+        background-color: #964252;
+        color: #ECEFF4;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+    #stopbtn:hover {
+        background-color: #803d4a;
     }
     QCheckBox {
     color: #33aaff;
