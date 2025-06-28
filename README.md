@@ -6,17 +6,17 @@ Image scraper for [wall.alphacoders.com](https://wall.alphacoders.com) **(Beta)*
 
 ## 📌 Features
 
-- Currently works only with [Alpha Coders Best Wallpapers](https://alphacoders.com/the-best?month=all&year=all)
+- Currently works with three image sections (best, latest, popular)[Alpha Coders Best Wallpapers](https://alphacoders.com/)
 - Download wallpapers to your desktop with one click
-- You need to manually choose the page to download from (Beta feature)
+- Choose needed sections, set page count, and start downloading
 
 ---
 
 ## 🛠️ Future Features
 
-- Support for all wallpapers sections
-- Ability to choose the number of pages to download
-- Option to select the download location
+- Support for all wallpaper sections
+- Ability to select specific pages to download
+- Faster page downloading
 
 ---
 
@@ -27,19 +27,24 @@ Image scraper for [wall.alphacoders.com](https://wall.alphacoders.com) **(Beta)*
 3. Open terminal or CMD in the project directory and run:
 
 ```bash
-pip install selenium
+pip install pyqt6
 pip install requests
-pip install webdriver-manager
+pip install playwright
 ```
 
 ---
 
-## 📋 Changes
+## 📋 Major Changes
 
-## v1.1.0 — 2025-06-21
+### 2025-06-21
 - Page count selector is now available
-- Auto creation of folder for images
-- Error catcher
+- Automatic creation of folder for images
+- Error catcher added
+
+### 2025-06-28
+- Stable GUI on PyQt6
+- Saving directory included
+- Stable parser without errors
 
 ---
 
