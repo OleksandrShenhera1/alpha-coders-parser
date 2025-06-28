@@ -3,7 +3,6 @@ from PyQt6.QtCore import QObject, pyqtSignal
 from playwright.sync_api import sync_playwright
 import os
 import requests
-import subprocess
 from pathlib import Path
 
 class ParserWorker(QObject):
@@ -24,11 +23,11 @@ class ParserWorker(QObject):
     def run(self):
         self.total_steps = 0
         if self.best:
-            self.total_steps += self.pg_count * 12
+            self.total_steps += self.pg_count * 15
         if self.latest:
-            self.total_steps += self.pg_count * 12
+            self.total_steps += self.pg_count * 15
         if self.popular:
-            self.total_steps += self.pg_count * 12
+            self.total_steps += self.pg_count * 15
         self.current_step = 0
 
         if self.best:
